@@ -1,0 +1,19 @@
+.brand {
+    text-align: start;
+    color: gray;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .name {
+    text-align: start;
+    font-weight: 400;
+    line-height: 0.9;
+    font-size: 16px;
+  }
+  
+  .price {
+    text-align: start;
+    font-weight: 600;
+    font-size: 18px;
+  }

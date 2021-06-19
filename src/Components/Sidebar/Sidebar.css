@@ -1,0 +1,46 @@
+h1 {
+    font-size: 1.75rem;
+    margin: 0 0 0.75rem 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+  }
+  
+  .left-half {
+    background-color: white;
+    flex: 1;
+    padding: 1rem;
+    height: 100vh;
+    width: 22%;
+    position: fixed;
+    padding-left: 1%;
+    color: white;
+  }
+  
+  .right-half {
+    flex: 4;
+    padding: 1rem;
+    height: 50vh;
+    margin-left: 25%;
+    margin-right: 3%;
+  }
+  
+  .txt-comp {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    cursor: pointer;
+  }
+  
+  
+  @media only screen and (min-width: 680px) and (max-width: 1025px) {
+    .left-half {
+      padding-left: 2%;
+    }
+    .txt-comp {
+      font-size: 18px;
+    }
+  }
