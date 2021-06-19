@@ -9,7 +9,7 @@ const Sidebar=()=> {
     const[data,setdata]=useState(products);
     const[selectedsize,setselectedsize]=useState([])
     const[selectedgender,setselectedgender]=useState([])
-    
+    const[selectedbrand,setselectedbrand]=useState([])
 
 
 
@@ -56,7 +56,7 @@ const Sidebar=()=> {
                 setselectedgender(selectedgender)
             }
             const[filteredproduct]=selectedgender.map((gender)=>
-            products.filter((a)=>a.size.includes(gender))
+            products.filter((a)=>a.gender.includes(gender))
             
             );
             console.log(filteredproduct)
@@ -64,9 +64,23 @@ const Sidebar=()=> {
         }
     }
     const brandfilter=(e)=>{
+        setselectedbrand([...selectedbrand,e.target.value])
         if(e.target.checked){
             setdata([...data].filter((a)=>a.brand.includes(e.target.value)))
             console.log(data)
+        }
+        else{
+            let index=selectedbrand?.indexOf(e.target.value);
+            if(index !== -1){
+                selectedbrand.splice(index,1);
+                setselectedbrand(selectedbrand)
+            }
+            const[filteredproduct]=selectedbrand.map((brand)=>
+            products.filter((a)=>a.brand.includes(brand))
+            
+            );
+            console.log(filteredproduct)
+            setdata(filteredproduct?.length? filteredproduct:products)
         }
         
     }
